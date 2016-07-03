@@ -5,7 +5,7 @@ var http = require('http');
 var app = express();
 var server = http.createServer(app);
 var port = process.env.PORT || 5000;
-var middleware = require('./config/middleware');
+var middleware = require('./middleware');
 
 middleware(app, express);
 
