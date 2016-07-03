@@ -3,6 +3,7 @@
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var cors = require('cors');
+var APP_SECRET = process.env.MESSENGER_APP_SECRET;
 
 module.exports = function(app, express) {
 
@@ -25,5 +26,5 @@ module.exports = function(app, express) {
     res.redirect('/');
   });
 
-  require(__dirname + '/messenger/routes.js')(messengerRouter);
+  require(__dirname + '/messenger/webhooks.js')(messengerRouter);
 };
