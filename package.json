@@ -1,0 +1,27 @@
+{
+  "name": "fluffy",
+  "version": "1.0.0",
+  "description": "fluffybot",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "nf start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polinadotio/fluffy.git"
+  },
+  "author": "Polina Soshnin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/polinadotio/fluffy/issues"
+  },
+  "homepage": "https://github.com/polinadotio/fluffy#readme",
+  "dependencies": {
+    "express": "4.14.0",
+    "foreman": "1.4.1",
+    "http": "0.0.0",
+    "nf": "0.0.3",
+    "nodemon": "1.9.2"
+  }
+}
