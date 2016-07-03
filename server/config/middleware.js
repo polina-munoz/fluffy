@@ -26,5 +26,5 @@ module.exports = function(app, express) {
     res.redirect('/');
   });
 
-  require(__dirname + '/messenger/webhooks.js')(messengerRouter);
+  require(__dirname + './../messenger/webhooks.js')(messengerRouter);
 };

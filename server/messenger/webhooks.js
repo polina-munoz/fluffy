@@ -1,7 +1,7 @@
 'use strict';
 
+var events = require('./events');
 var WEBHOOK_VALIDATION_TOKEN = process.env.MESSENGER_VALIDATION_TOKEN;
-var msg = require('./events');
 
 module.exports = function(app) {
 
@@ -30,13 +30,13 @@ module.exports = function(app) {
         // Iterate over each messaging event
         pageEntry.messaging.forEach(function(messagingEvent) {
           if (messagingEvent.optin) {
-            msg.receivedAuthentication(messagingEvent);
+            events.receivedAuthentication(messagingEvent);
           } else if (messagingEvent.message) {
-            msg.receivedMessage(messagingEvent);
+            events.receivedMessage(messagingEvent);
           } else if (messagingEvent.delivery) {
-            msg.receivedDeliveryConfirmation(messagingEvent);
+            events.receivedDeliveryConfirmation(messagingEvent);
           } else if (messagingEvent.postback) {
-            msg.receivedPostback(messagingEvent);
+            events.receivedPostback(messagingEvent);
           } else {
             console.log("Webhook received unknown messagingEvent: ", messagingEvent);
           }
