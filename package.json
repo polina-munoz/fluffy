@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/polinadotio/fluffy#readme",
   "dependencies": {
+    "body-parser": "1.15.2",
+    "cors": "2.7.1",
     "express": "4.14.0",
     "foreman": "1.4.1",
     "http": "0.0.0",
+    "morgan": "1.7.0",
     "nf": "0.0.3",
     "nodemon": "1.9.2"
   }
