@@ -84,6 +84,11 @@ events.receivedMessage = function(event) {
         messages.sendReceiptMessage(senderID);
         break;
 
+      case 'ping':
+        var message = "Received message for user and page" + senderID + recipientID + timeOfMessage;
+        messages.sendTextMessage(senderID, message);
+        break;
+
       default:
         messages.sendTextMessage(senderID, messageText);
     }
